@@ -17,6 +17,7 @@ from torch.utils.data import Dataset
 
 from ultralytics.data.utils import FORMATS_HELP_MSG, HELP_URL, IMG_FORMATS
 from ultralytics.utils import DEFAULT_CFG, LOCAL_RANK, LOGGER, NUM_THREADS, TQDM
+import os
 
 
 class BaseDataset(Dataset):
@@ -48,20 +49,20 @@ class BaseDataset(Dataset):
     """
 
     def __init__(
-            self,
-            img_path,
-            imgsz=640,
-            cache=False,
-            augment=True,
-            hyp=DEFAULT_CFG,
-            prefix="",
-            rect=False,
-            batch_size=16,
-            stride=32,
-            pad=0.5,
-            single_cls=False,
-            classes=None,
-            fraction=1.0,
+        self,
+        img_path,
+        imgsz=640,
+        cache=False,
+        augment=True,
+        hyp=DEFAULT_CFG,
+        prefix="",
+        rect=False,
+        batch_size=16,
+        stride=32,
+        pad=0.5,
+        single_cls=False,
+        classes=None,
+        fraction=1.0,
     ):
         """Initialize BaseDataset with given configuration and options."""
         super().__init__()
