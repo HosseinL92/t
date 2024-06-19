@@ -150,7 +150,7 @@ class BaseDataset(Dataset):
                     Path(fn).unlink(missing_ok=True)
                     im = cv2.imread(f)  # BGR
             else:  # read image
-                print('test change')
+                print('test change1')
                 im = cv2.imread(f)  # BGR
 
             if im is None:
