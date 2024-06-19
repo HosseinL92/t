@@ -154,8 +154,9 @@ class BaseDataset(Dataset):
                     Path(fn).unlink(missing_ok=True)
                     im = cv2.imread(f)  # BGR
             else:  # read image
-                im = cv2.imread(f)  # BGR
                 print('test change')
+                im = cv2.imread(f)  # BGR
+
             if im is None:
                 raise FileNotFoundError(f"Image Not Found {f}")
 
