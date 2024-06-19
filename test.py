@@ -16,6 +16,7 @@ from torch.utils.data import Dataset
 
 from ultralytics.data.utils import FORMATS_HELP_MSG, HELP_URL, IMG_FORMATS
 from ultralytics.utils import DEFAULT_CFG, LOCAL_RANK, LOGGER, NUM_THREADS, TQDM
+import os
 
 
 class BaseDataset(Dataset):
@@ -154,7 +155,7 @@ class BaseDataset(Dataset):
                     im = cv2.imread(f)  # BGR
             else:  # read image
                 im = cv2.imread(f)  # BGR
-                print('change')
+                print('test change')
             if im is None:
                 raise FileNotFoundError(f"Image Not Found {f}")
 
