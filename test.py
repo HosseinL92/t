@@ -163,7 +163,8 @@ class BaseDataset(Dataset):
                 im = rioplot.reshape_as_image(image)
                 im = im[:, :, ::-1]
 
-                # if ds_dtype == 'unit16':
+                if ds_dtype == 'unit16':
+                    print('Yes')
                 #
                 #     im = im/255
                 #     im = np.uint8(im)
